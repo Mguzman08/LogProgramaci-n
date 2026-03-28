@@ -3,28 +3,36 @@
 numero = int(input("Ingrese un número decimal: "))
 base = int(input("Ingrese la base destino (2, 8 o 16): "))
 
-resultado = ""
+# Validación de base
+if base not in [2, 8, 16]:
+    print("Error: Base no válida. Solo se permite 2, 8 o 16.")
+else:
+    resultado = ""
 
-while numero > 0:
-    residuo = numero % base
-
-    # Para hexadecimal
-    if residuo == 10:
-        digito = "A"
-    elif residuo == 11:
-        digito = "B"
-    elif residuo == 12:
-        digito = "C"
-    elif residuo == 13:
-        digito = "D"
-    elif residuo == 14:
-        digito = "E"
-    elif residuo == 15:
-        digito = "F"
+    # Caso especial: número 0
+    if numero == 0:
+        resultado = "0"
     else:
-        digito = str(residuo)
+        while numero > 0:
+            residuo = numero % base
 
-    resultado = digito + resultado
-    numero = numero // base
+            # Conversión para hexadecimal
+            if residuo == 10:
+                digito = "A"
+            elif residuo == 11:
+                digito = "B"
+            elif residuo == 12:
+                digito = "C"
+            elif residuo == 13:
+                digito = "D"
+            elif residuo == 14:
+                digito = "E"
+            elif residuo == 15:
+                digito = "F"
+            else:
+                digito = str(residuo)
 
-print("Resultado:", resultado)
+            resultado = digito + resultado
+            numero = numero // base
+
+    print("Resultado:", resultado)
