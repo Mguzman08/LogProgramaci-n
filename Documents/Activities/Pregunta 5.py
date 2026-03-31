@@ -32,4 +32,5 @@ for i in range(cantidad_numbers):
 #4. Finally, we will print the total number of Pythagorean triplets found.
 print(f"Total Pythagorean triplets found: {exitos}")
 
-
+#code made with help of gemini, the AI assistant of Google, using nested loops (I learned how to use it for future projects)
+#and the Pythagorean theorem to find triplets of numbers that satisfy the condition a^2 + b^2 = c^2.
