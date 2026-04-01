@@ -13,10 +13,6 @@ for i in range(1, 31):
 #We will calculate the average temperature.
 average = sum(temperatures) / len(temperatures)
 
-#We will find the highest and lowest temperatures.
-highest = max(temperatures)
-lowest = min(temperatures)
-
 #We will count the number of days with temperatures above and below the average.
 above_average = 0
 below_average = 0
@@ -26,6 +22,10 @@ for temp in temperatures:
         above_average += 1
     elif temp < average:
         below_average += 1
+
+#We will find the highest and lowest temperatures.
+highest = max(temperatures)
+lowest = min(temperatures)
 
 #We will print the results.
 print(f"Average temperature: {average:.2f}")
